@@ -6,9 +6,13 @@ from templat import temp
 def homepage():
     temp()
     ui.label('Welcome to the homepage')
-    with ui.column().classes('null'):
+    with ui.column().classes('border border-red-400 w-full h-full'):
         ui.button('Page 1')
         ui.button('Page 2')
+        
+    with ui.row().classes('border border-red-400 w-full h-full flex-center'):
+        ui.button('Page 3')
+        ui.button('Page 4')
 
 @ui.page('/page-1')
 def page1():
