@@ -16,6 +16,11 @@ def homepage():
             ui.button('edit').on_click(lambda: ui.info('Form edit!'))
             ui.space().classes('flex-grow')
             ui.button('clear').on_click(lambda: ui.info('Form clear!'))
+        with ui.grid(columns='100px 100px auto auto').classes('border border-green-400 w-full h-full'):
+            ui.label('account')
+            ui.label('password')
+            ui.label('e-mail')
+            ui.label('address')
         
 @ui.page('/page-1')
 def page1():
