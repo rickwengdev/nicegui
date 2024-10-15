@@ -5,15 +5,18 @@ from templat import temp
 @ui.page('/')
 def homepage():
     temp()
-    ui.label('Welcome to the homepage')
-    with ui.column().classes('border border-red-400 w-full h-full'):
-        ui.button('Page 1')
-        ui.button('Page 2')
+    with ui.card().classes('w-[500px]'):
+        with ui.column().classes('border border-red-400 w-full h-full'):
+            ui.input(label='account').classes('w-full')
+            ui.input(label='password').classes('w-full')
+            ui.input(label='e-mail').classes('w-full')
+            ui.input(label='address').classes('w-full')
+        with ui.row().classes('border border-blue-400 w-full h-full'):
+            ui.button('add').on_click(lambda: ui.info('Form submitted!'))
+            ui.button('edit').on_click(lambda: ui.info('Form edit!'))
+            ui.space().classes('flex-grow')
+            ui.button('clear').on_click(lambda: ui.info('Form clear!'))
         
-    with ui.row().classes('border border-red-400 w-full h-full flex-center'):
-        ui.button('Page 3')
-        ui.button('Page 4')
-
 @ui.page('/page-1')
 def page1():
     temp()
