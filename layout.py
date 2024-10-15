@@ -21,6 +21,11 @@ def homepage():
 def page1():
     temp()
     ui.label('This is page 1')
+    with ui.grid(columns=2):
+        ui.button('Button 1')
+        ui.button('Button 2')
+        ui.button('Button 3')
+        ui.button('Button 4')
     
 @ui.page('/page-2')
 def page2():
