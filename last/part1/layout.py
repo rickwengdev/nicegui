@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from nicegui import ui
-from templat import temp
+from part.templat import temp
 
 @ui.page('/')
 def homepage():
